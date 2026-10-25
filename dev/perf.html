@@ -1,0 +1,5 @@
+<canvas id="stage"></canvas><script>
+window.drawFrame=(ctx,i,n)=>{const w=ctx.canvas.width,h=ctx.canvas.height,t=i/(n-1);
+const g=ctx.createLinearGradient(0,0,w,h);g.addColorStop(0,'hsl('+(t*360)+',70%,40%)');g.addColorStop(1,'#111');ctx.fillStyle=g;ctx.fillRect(0,0,w,h);
+for(let k=0;k<200;k++){ctx.fillStyle='hsla('+(k*7+t*360)+',80%,60%,.5)';ctx.beginPath();ctx.arc(w/2+Math.cos(k+t*6)*k*4,h/2+Math.sin(k*1.3+t*6)*k*2.2,20,0,7);ctx.fill();}};
+</script>
